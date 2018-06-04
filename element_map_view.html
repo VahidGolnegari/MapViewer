@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <base href="file:///android_asset/map_webview/">
+        <!-- <base href="file:///Users/vahidglngy/AndroidProject/Municipality/app/src/main/assets/map_webview/"> -->
+        <!-- MATERIALIZE -->
+        <link href="css/materialize.min.css" rel="stylesheet" >
+        <!-- END MATERIALIZE -->
+    </head>
+
+    <body>
+
+        <ul id="layer_dropdown" class="dropdown-content">
+        </ul>
+        <ul id="element_dropdown" class="dropdown-content">
+        </ul>
+        <nav>
+            <div class="nav-wrapper">
+                <ul class="right hide-on-med-and-down">
+                    <!-- Dropdown Trigger -->
+                    <li><a class="ShowLayer" href="#!" data-target="layer_dropdown">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                    <li><a class="ShowElements" href="#!" data-target="eleman_dropdown">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- BEGIN PAGE CONTENT BODY -->
+        <div class="page-content no-padding-tb">
+            <div class="l-wrapper">
+                <div class="l-side">
+                    <!-- LAYER -->
+                    <div class="btn-group btn-block" style="padding-left: 12px;">
+                        <button type="button" class="btn btn-default btn-sm btn-block dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-ellipsis-horizontal"></i> گروه المان
+                            <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul id="layer-drop-down" class="dropdown-menu btn-block">
+                                <li>
+                                    <a href="http://192.168.88.26:5858/Home/moduleId/405/layerId/2/controller/Element/action/Index"> فرهنگی </a>
+                                </li>
+                        </ul>
+                    </div>
+                    <!-- END LAYER -->
+                    <div class="portlet">
+                        <div class="portlet-body">
+                            <div class="scroller" style="height: 400px" data-rail-visible="1" data-rail-color="yellow" data-handle-color="#a1b2bd">
+                                <div class="table-scrollable">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th> المان </th>
+                                            <th> عملیات </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a id="element-1" class="add-markers">مجسمه</a>
+                                                </td>
+                                                <td>
+                                                    <a title="جدید" class="btn btn-xs add-marker">
+                                                        <i id="element-1" class="fa fa-plus"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="l-content">
+                    <div class="portlet light" style="width: 100%;">
+                        <!-- MAP -->
+                        <div class="portlet-body">
+                            <div id="gmap_basic" class="gmaps" style="height: 600px !important;"></div>
+                        </div>
+                        <!-- END MAP -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE CONTENT BODY -->
+        <div id="element-detail" class="modal fade" tabindex="-1" aria-hidden="true">
+            <div id="element-detail-template">
+                <!-- Inject dynamic form here! -->
+            </div>
+        </div>
+
+        <!-- Javascripts IMPORT -->
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>             <!-- JQUERY 3.3.1 -->
+        <script type="text/javascript" src="js/materialize.min.js"></script>              <!-- MATERIALIZE -->
+        <script type="text/javascript" src="scripts/GlobalVariables.js"></script>         <!-- GLOBAL Var -->
+        <script type="text/javascript" src="scripts/ApiService.js"></script>              <!-- API SERVICE -->
+        <script type="text/javascript" src="scripts/ShowLayers.js"></script>              <!-- SHOW LAYER -->
+        <script type="text/javascript" src="scripts/ShowElements.js"></script>            <!-- SHOW ELEMENTS -->
+        <script type="text/javascript" src="scripts/OracleMapViewer.js"></script>         <!-- ORACLE MAP VIEWER -->
+        <!-- END SCRIPTS -->
+
+    </body>
+</html>
