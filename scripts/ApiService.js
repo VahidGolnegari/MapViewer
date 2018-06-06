@@ -143,52 +143,57 @@ UrbanElementsDatabaseApiService.elementPointService = function (moduleId) {
 
         $("#element-detail-template").html("\
         <div id='modal1' class='modal'>\
-        <div class='modal-content'>\
-        <ul class='tabs'>\
-        <li class='tab col s3'><a class='active' href='#properties_tab'> مشخصات </a></li>\
-        <li class='tab col s3'><a href='#form_tab'> فرم </a></li>\
-        <div id='properties_tab' class='col s12'>\
-        <form class='col s12'>\
-        <div class='row'>\
-        <div class='input-field col s6'>\
-        <input disable value='" + elementPointData.CreatedBy + "' id='created_by' type='text' class='validate'>\
-        <label for='created_by'>ایجاد کننده</label>\
-      </div>\
-      <div class='input-field col s6'>\
-      <input disable value='" + elementPointData.CreatedAt + "' id='created_at' type='text' class='validate'>\
-      <label for='created_at'>تاریخ ایجاد</label>\
-    </div>\
-    <div class='input-field col s6'>\
-    <input disable value='" + elementPointData.UpdatedAt + "' id='updated_at' type='text' class='validate'>\
-    <label for='updated_at'>تاریخ ویرایش</label>\
-  </div>\
-  <div class='input-field col s6'>\
-  <input disable value='" + elementPointData.ElementType + "' id='element_type' type='text' class='validate'>\
-  <label for='element_type'>نوع المان</label>\
-</div>\
-<div class='input-field col s6'>\
-<input disable value='" + elementPointData.Latitude + "' id='latitude' type='text' class='validate'>\
-<label for='latitude'>عرض جغرافیایی</label>\
-</div>\
-<div class='input-field col s6'>\
-<input disable value='" + elementPointData.Longitude + "' id='longitude' type='text' class='validate'>\
-<label for='longitude'>طول جغرافیایی</label>\
-</div>\
-</div>\
-</form>\
+            <div class='modal-content'>\
+                <ul class='tabs'>\
+                    <li class='tab col s3'>\
+                        <a class='active' href='#properties_tab'> مشخصات </a>\
+                    </li>\
+                    <li class='tab col s3'>\
+                        <a href='#form_tab'> فرم </a>\
+                    </li>\
+                    <div id='properties_tab' class='col s12'>\
+                        <form class='col s12'>\
+                            <div class='row'>\
+                                <div class='input-field col s6'>\
+                                    <input disable value='" + elementPointData.CreatedBy + "' id='created_by' type='text' class='validate'>\
+                                    <label for='created_by'>ایجاد کننده</label>\
+                                </div>\
+                                <div class='input-field col s6'>\
+                                    <input disable value='" + elementPointData.CreatedAt + "' id='created_at' type='text' class='validate'>\
+                                    <label for='created_at'>تاریخ ایجاد</label>\
+                                </div>\
+                                <div class='input-field col s6'>\
+                                    <input disable value='" + elementPointData.UpdatedAt + "' id='updated_at' type='text' class='validate'>\
+                                    <label for='updated_at'>تاریخ ویرایش</label>\
+                                </div>\
+                                <div class='input-field col s6'>\
+                                    <input disable value='" + elementPointData.ElementType + "' id='element_type' type='text' class='validate'>\
+                                    <label for='element_type'>نوع المان</label>\
+                                </div>\
+                                <div class='input-field col s6'>\
+                                    <input disable value='" + elementPointData.Latitude + "' id='latitude' type='text' class='validate'>\
+                                    <label for='latitude'>عرض جغرافیایی</label>\
+                                </div>\
+                                <div class='input-field col s6'>\
+                                    <input disable value='" + elementPointData.Longitude + "' id='longitude' type='text' class='validate'>\
+                                    <label for='longitude'>طول جغرافیایی</label>\
+                                </div>\
+                                </div>\
+                        </form>\
+                    </div>\
+                    <div id='form_tab' class='col s12'>\
+                        <div class='card-panel red lighten-4 red-text text-darken-4' id='element-detail-button'></div>\
+                        <form class='col s12'>\
+                            <div class='row'>/ " + elementAttributesHtml + " \ </div>\
+                         </form>\
+                     </div>\
+                </ul>\
+            </div>\
+            <div class='modal-footer'>\
+                <a href='#element-detail-button' class='modal-close waves-effect waves-green btn-flat'>ذخیره</a>\
+            </div>\
+            <script> $('#element-detail-button').click(function(e) { updateElementPointAttributes('" + this.updateElementPointAttributesActionUrl + "', " + elementPointData.ElementPointId + ",'"+ this.indexPath +"'); }); </script> \
         </div>\
-        <div id='form_tab' class='col s12'>\
-        <div class='card-panel red lighten-4 red-text text-darken-4' id='element-detail-button'></div>\
-        <form class='col s12'>\
-        <div class='row'>/ " + elementAttributesHtml + " \ </div>\
-        </form>\
-        </div>\
-        </ul>\
-        </div>\
-        <div class='modal-footer'>\
-          <a href='#element-detail-button' class='modal-close waves-effect waves-green btn-flat'>ذخیره</a>\
-        </div>\
-      </div>\
       \
                         <div class='modal-dialog'> \
                             <div class='modal-content'> \
