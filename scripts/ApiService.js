@@ -144,6 +144,7 @@ UrbanElementsDatabaseApiService.elementPointService = function (moduleId) {
         $("#element-detail-template").html("\
         <div id='modal1' class='modal'>\
             <div class='modal-content'>\
+                <h4>مشخصات</h4>\
                 <ul class='tabs'>\
                     <li class='tab col s3'>\
                         <a class='active' href='#properties_tab'> مشخصات </a>\
@@ -155,27 +156,27 @@ UrbanElementsDatabaseApiService.elementPointService = function (moduleId) {
                         <form class='col s12'>\
                             <div class='row'>\
                                 <div class='input-field col s6'>\
-                                    <input disable value='" + elementPointData.CreatedBy + "' id='created_by' type='text' class='validate'>\
+                                    <input disabled value='" + elementPointData.CreatedBy + "' id='created_by' type='text' class='validate'>\
                                     <label for='created_by'>ایجاد کننده</label>\
                                 </div>\
                                 <div class='input-field col s6'>\
-                                    <input disable value='" + elementPointData.CreatedAt + "' id='created_at' type='text' class='validate'>\
+                                    <input disabled value='" + elementPointData.CreatedAt + "' id='created_at' type='text' class='validate'>\
                                     <label for='created_at'>تاریخ ایجاد</label>\
                                 </div>\
                                 <div class='input-field col s6'>\
-                                    <input disable value='" + elementPointData.UpdatedAt + "' id='updated_at' type='text' class='validate'>\
+                                    <input disabled value='" + elementPointData.UpdatedAt + "' id='updated_at' type='text' class='validate'>\
                                     <label for='updated_at'>تاریخ ویرایش</label>\
                                 </div>\
                                 <div class='input-field col s6'>\
-                                    <input disable value='" + elementPointData.ElementType + "' id='element_type' type='text' class='validate'>\
+                                    <input disabled value='" + elementPointData.ElementType + "' id='element_type' type='text' class='validate'>\
                                     <label for='element_type'>نوع المان</label>\
                                 </div>\
                                 <div class='input-field col s6'>\
-                                    <input disable value='" + elementPointData.Latitude + "' id='latitude' type='text' class='validate'>\
+                                    <input disabled value='" + elementPointData.Latitude + "' id='latitude' type='text' class='validate'>\
                                     <label for='latitude'>عرض جغرافیایی</label>\
                                 </div>\
                                 <div class='input-field col s6'>\
-                                    <input disable value='" + elementPointData.Longitude + "' id='longitude' type='text' class='validate'>\
+                                    <input disabled value='" + elementPointData.Longitude + "' id='longitude' type='text' class='validate'>\
                                     <label for='longitude'>طول جغرافیایی</label>\
                                 </div>\
                                 </div>\
