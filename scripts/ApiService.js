@@ -193,71 +193,7 @@ UrbanElementsDatabaseApiService.elementPointService = function (moduleId) {
                 <a href='#element-detail-button' class='modal-close waves-effect waves-green btn-flat'>ذخیره</a>\
             </div>\
             <script> $('#element-detail-button').click(function(e) { updateElementPointAttributes('" + this.updateElementPointAttributesActionUrl + "', " + elementPointData.ElementPointId + ",'"+ this.indexPath +"'); }); </script> \
-        </div>\
-      \
-                        <div class='modal-dialog'> \
-                            <div class='modal-content'> \
-                                <div class='modal-header'> \
-                                    <button type='button' class='close' data-dismiss='modal' aria-hidden='true'></button> \
-                                    <h4 class='modal-title'>مشخصات المان</h4> \
-                                </div> \
-                                <div class='modal-body'> \
-                                    <div class='scroller' style='height: 300px; display: inline;' data-always-visible='1' data-rail-visible1='1'> \
-                                        <div class='tabbable-line'> \
-                                            <ul class='nav nav-tabs '> \
-                                                <li class='active'> \
-                                                    <a href='#tab_15_1' data-toggle='tab'> مشخصات </a> \
-                                                </li> \
-                                                <li> \
-                                                    <a href='#tab_15_2' data-toggle='tab'> فرم </a> \
-                                                </li> \
-                                            </ul> \
-                                            <div class='tab-content'> \
-                                                <div class='tab-pane active' id='tab_15_1'> \
-                                                    <div class='row'> \
-                                                        <div class='col-md-6'> \
-                                                            <p> \
-                                                                <input type='text' class='col-md-12 form-control' readonly placeholder='ایجاد کننده: " + elementPointData.CreatedBy + "'> \
-                                                            </p> \
-                                                            <p> \
-                                                                <input type='text' class='col-md-12 form-control' readonly placeholder='تاریخ ایجاد: " + elementPointData.CreatedAt + "'> \
-                                                            </p> \
-                                                            <p> \
-                                                                <input type='text' class='col-md-12 form-control' readonly placeholder='تاریخ ویرایش: " + elementPointData.UpdatedAt + "'> \
-                                                            </p> \
-                                                        </div> \
-                                                        <div class='col-md-6'> \
-                                                            <p> \
-                                                                <input type='text' class='col-md-12 form-control' readonly placeholder='نوع المان: " + elementPointData.ElementType + "'> \
-                                                            </p> \
-                                                            <p> \
-                                                                <input type='text' class='col-md-12 form-control' readonly placeholder='عرض جغرافیایی: " + elementPointData.Geom.Latitude + "'> \
-                                                            </p> \
-                                                            <p> \
-                                                                <input type='text' class='col-md-12 form-control' readonly placeholder='طول جغرافیایی: " + elementPointData.Geom.Longitude + "'> \
-                                                            </p> \
-                                                        </div> \
-                                                    </div> \
-                                                </div> \
-                                                <div class='tab-pane' id='tab_15_2'> \
-                                                    <div class='alert alert-danger d-none' id='attribute-form-error-message'></div> \
-                                                    <form class='row element-detail-form'> \
-                                                        " + elementAttributesHtml + " \
-                                                    </form> \
-                                                </div> \
-                                            </div> \
-                                        </div> \
-                                    </div> \
-                                </div> \
-                                <div class='modal-footer'> \
-                                    <a id='element-detail-button' class='btn green edit-element-attributes'>ذخیره</a> \
-                                    <a href=' " + this.elementPointWorkFlowViewSingleActionUrl.replace(/_elementPointId_/g, elementPointData.ElementPointId).replace(/_workFlowId_/g, elementPointData.WorkFlowId) + "' target='_blank' class='btn blue btn-outline'>گردش کارها</a> \
-                                    <button type='button' data-dismiss='modal' class='btn default btn-outline'>بستن</button> \
-                                </div> \
-                            </div> \
-                            <script> $('#element-detail-button').click(function(e) { updateElementPointAttributes('" + this.updateElementPointAttributesActionUrl + "', " + elementPointData.ElementPointId + ",'"+ this.indexPath +"'); }); </script> \
-                        </div> \
-                    ");
+        </div> \ ");
         // Visible the generated form.
         $("#element-detail").modal('show');
     },
